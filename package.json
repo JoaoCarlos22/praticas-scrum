@@ -1,0 +1,22 @@
+{
+	"name": "praticas-scrum",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node --watch index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoaoCarlos22/praticas-scrum.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/JoaoCarlos22/praticas-scrum/issues"
+	},
+	"homepage": "https://github.com/JoaoCarlos22/praticas-scrum#readme"
+}
