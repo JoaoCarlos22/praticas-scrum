@@ -1,0 +1,44 @@
+name: CI Pipeline
+
+# Este workflow é acionado em pushes e pull requests para todas as branches.
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  # Job para build e execução de testes
+  build-and-test:
+    name: Build e Testes
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo para checkout do código
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      # Passo para configurar o Node.js
+      - name: Setup do Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Passo para instalar dependências
+      - name: Instalar dependencias
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+      # Passo para rodar os testes
+      - name: Rodar testes
+        run: npm test
+
+      # Passo para rodar a aplicação
+      - name: Rodar aplicação
+        run: npm start --watch
