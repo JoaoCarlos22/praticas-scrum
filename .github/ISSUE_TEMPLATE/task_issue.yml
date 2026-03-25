@@ -4,24 +4,24 @@ title: "[Título da tarefa]"
 labels:
   - sprint-task
 body:
-	- type: textarea
-		id: descricao_breve
-		attributes:
-			label: "📝 Descrição Breve"
-			description: "Descreva em poucas linhas o objetivo da task."
-			placeholder: "Implementar validação de formato de e-mail no formulário de cadastro para reduzir erros de entrada."
-		validations:
-			required: true
+  - type: textarea
+    id: descricao_breve
+    attributes:
+      label: "📝 Descrição Breve"
+      description: "Descreva em poucas linhas o objetivo da task."
+      placeholder: "Implementar validação de formato de e-mail no formulário de cadastro para reduzir erros de entrada."
+    validations:
+      required: true
 
-	- type: textarea
-		id: checklist
-		attributes:
-			label: "✅ Checklist de Tarefas"
-			description: "Marque os itens conforme concluir."
-			placeholder: |
-				- [ ] Criar tabela no banco de dados
-				- [ ] Implementar endpoint na API
+  - type: textarea
+    id: checklist
+    attributes:
+      label: "✅ Checklist de Tarefas"
+      description: "Marque os itens conforme concluir."
+      placeholder: |
+        - [ ] Criar tabela no banco de dados
+        - [ ] Implementar endpoint na API
         - [ ] Desenvolver interface de usuário
-				- [ ] Criar/atualizar testes
-		validations:
-			required: true
+        - [ ] Criar/atualizar testes
+    validations:
+      required: true
