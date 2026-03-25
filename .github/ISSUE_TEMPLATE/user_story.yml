@@ -1,0 +1,92 @@
+name: User Story
+description: Crie uma nova user story no formato padrão do time.
+title: "USXX - [Título da Story]"
+labels:
+  - user-story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preencha os campos abaixo para registrar a user story.
+
+  - type: input
+    id: us_id
+    attributes:
+      label: "🆔 ID da Story"
+      description: "Exemplo: US01"
+      placeholder: "US01"
+    validations:
+      required: true
+
+  - type: input
+    id: us_title
+    attributes:
+      label: "🏷️ Título"
+      description: "Exemplo: Cadastro de Perfil"
+      placeholder: "Cadastro de Perfil"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "📝 Descrição"
+      description: "Formato sugerido: Enquanto [tipo de usuário], desejo [objetivo], para que [benefício]."
+      placeholder: "Enquanto cliente, desejo me cadastrar na plataforma utilizando e-mail e senha, para que meus dados pessoais e histórico de pedidos sejam salvos com segurança."
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios_aceitacao
+    attributes:
+      label: "✅ Critérios de Aceitação"
+      description: "Informe um critério por linha."
+      placeholder: |
+        O sistema deve validar se o e-mail possuir formato válido
+        A senha deve ter no mínimo 8 caracteres, incluindo letras e números
+        O sistema deve enviar um e-mail de confirmação de cadastro
+    validations:
+      required: true
+
+  - type: textarea
+    id: regra_negocio
+    attributes:
+      label: "📏 Regra de Negócios"
+      description: "Informe as regras de negócio aplicáveis."
+      placeholder: "Não é permitido o cadastro de dois usuários com o mesmo e-mail"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexidade
+    attributes:
+      label: "📊 Complexidade"
+      options:
+        - Baixa
+        - Média
+        - Alta
+    validations:
+      required: true
+
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: "🎯 Story Points"
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Exemplo esperado:
+        US01 - Cadastro de Perfil
+        Descrição: Enquanto cliente, desejo me cadastrar na plataforma utilizando e-mail e senha, para que meus dados pessoais e histórico de pedidos sejam salvos com segurança.
+        Critérios de Aceitação: validar e-mail, senha com mínimo de 8 caracteres e envio de e-mail de confirmação.
+        Regra de Negócios: não permitir dois usuários com o mesmo e-mail.
+        Complexidade: Baixa | Story Points: 2
