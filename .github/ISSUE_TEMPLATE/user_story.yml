@@ -1,4 +1,4 @@
-name: User Story
+name: ✨ User Story / História de Usuário
 description: Crie uma nova user story no formato padrão do time.
 title: "USXX - [Título da Story]"
 labels:
@@ -9,19 +9,25 @@ body:
       value: |
         Preencha os campos abaixo para registrar a user story.
 
+  - type: markdown
+    attributes:
+      value: "## 📝 Descrição"
   - type: textarea
     id: descricao
     attributes:
-      label: "## 📝 Descrição"
+      label: "📝 Descrição"
       description: "Formato sugerido: Enquanto [tipo de usuário], desejo [objetivo], para que [benefício]."
       placeholder: "Enquanto cliente, desejo me cadastrar na plataforma utilizando e-mail e senha, para que meus dados pessoais e histórico de pedidos sejam salvos com segurança."
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "## ✅ Critérios de Aceitação"
   - type: textarea
     id: criterios_aceitacao
     attributes:
-      label: "## ✅ Critérios de Aceitação"
+      label: "✅ Critérios de Aceitação"
       description: "Informe um critério por linha."
       placeholder: |
         O sistema deve validar se o e-mail possuir formato válido
@@ -30,19 +36,25 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "## 📏 Regras de Negócios"
   - type: textarea
     id: regra_negocio
     attributes:
-      label: "## 📏 Regra de Negócios"
+      label: "📏 Regra de Negócios"
       description: "Informe as regras de negócio aplicáveis."
       placeholder: "Não é permitido o cadastro de dois usuários com o mesmo e-mail"
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "## 📊 Complexidade e Story Points"
   - type: dropdown
     id: complexidade
     attributes:
-      label: "## 📊 Complexidade"
+      label: "📊 Complexidade"
       options:
         - Baixa
         - Média
@@ -53,7 +65,7 @@ body:
   - type: dropdown
     id: story_points
     attributes:
-      label: "## 🎯 Story Points"
+      label: "🎯 Story Points"
       options:
         - "1"
         - "2"
