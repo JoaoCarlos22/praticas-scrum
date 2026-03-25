@@ -41,4 +41,4 @@ jobs:
 
       # Passo para rodar a aplicação
       - name: Rodar aplicação
-        run: npm start --watch
+        run: npm start
